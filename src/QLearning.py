@@ -15,7 +15,10 @@ class QAgent(agent.Agent):
         with open(path, 'rb') as handle:
             self.model = pickle.load(handle)
 
-    def act(self, state):        
-        action = np.argmax(self.model[state])
+    def act(self, state):     
+        try:
+            action = np.argmax(self.model[state])
+        except:
+            action = np.random.randint(0, 2)
         
         return action
