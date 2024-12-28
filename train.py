@@ -7,11 +7,11 @@ import src.QLearning as QLearning, src.env as env
 def train():
 
     dict_params = {
-        "learning_rate": 0.1,
+        "learning_rate": 0.05,
         "discount": 0.95,
         "episodes": 1_200_000,
         "log_frequency": 200,
-        "epsilon": 0.1,
+        "epsilon": 0.15,
         "start_decay": 1}
 
     envr = env.Env('None')
