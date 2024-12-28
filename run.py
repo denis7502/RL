@@ -9,5 +9,5 @@ if __name__ == '__main__':
         envs.reset()
         while not done:
             action = agt.act(envs.get_discrete_state(envs.obs))
-            envs.step(action)
+            _, _, done, _ = envs.step(action)
             envs.render()
